@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "./back/asgi.py",
+            "use": "@vercel/python"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/",
+            "headers":{
+                "Allow": "GET, POST, PUT, DELETE, HEAD, OPTIONS"
+            },
+            "continue":true
+        }
+    ]
+}
